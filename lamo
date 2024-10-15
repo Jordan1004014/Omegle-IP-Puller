@@ -1,0 +1,29 @@
+ const button = document.createElement("button");
+        button.innerHTML = "IP Lookup";
+        button.addEventListener("click", function() {
+          window.open("https://whatismyipaddress.com/ip/" + fields[4]);
+          window.open("https://browserleaks.com/ip/" + fields[4]);
+        });|
+import re
+
+def extract_ip_addresses(file_path):
+    # Regular expression pattern for matching IP addresses
+    ip_pattern = r'(?:(?:\d{1,3}\.){3}\d{1,3})'
+    
+    with open(file_path, 'r') as file:
+        log_data = file.read()
+
+    # Find all IP addresses in the log data
+    ip_addresses = re.findall(ip_pattern, log_data)
+    
+    return set(ip_addresses)  # Return unique IP addresses
+
+if __name__ == "__main__":
+    log_file_path = 'path/to/your/logfile.log'  # Update this path
+    ips = extract_ip_addresses(log_file_path)
+    
+    print("Extracted IP Addresses:")
+    for ip in ips:
+        print(ip)
+(ping) Cellphone tower =2___________ 
+Address = Computer---122332---_--___--_)(Ping)
